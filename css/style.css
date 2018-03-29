@@ -1,0 +1,89 @@
+/* GENERAL */
+
+@font-face {
+    font-family: storyBook;
+    src: url(/assets/StoryBook.otf);
+}
+@font-face {
+    font-family: oswaldLight;
+    src: url(/assets/Oswald-Light.ttf);
+}
+@font-face {
+    font-family: oswaldExtraLight;
+    src: url(/assets/Oswald-ExtraLight.ttf);
+}
+body, html {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.page {
+    height: 100vh;
+    width: 100vw;
+}
+.container-big {
+    max-width: 1150px;
+}
+
+h2 {
+    font-family: storyBook;
+    font-size: 80px;
+}
+.center {
+    margin: 0 auto;
+}
+.image-responsive {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* LANDING */
+
+.landing {
+    background: #FFC6C6;
+}
+.landing-container {
+    display: grid;
+}
+#logo {
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+#webstories {
+    max-height: 70px
+}
+#headline {
+    font-family: storyBook;
+    color: #596E78;
+    font-size: 73px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    transform: rotate(-14deg);
+}
+#subtext {
+font-family:oswaldExtraLight;
+font-size:25px;
+color:#596e78;
+letter-spacing:0;
+}
+.cntower {
+    max-height: 180px;
+    margin-top: 50px;
+}
+.mousedown {
+    max-height: 50px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    /* bring your own prefixes */
+
+    transform: translate(-50%, -50%);
+}
+
+
+/* STORY CONTAINER */
+
+/* RESOLUTION */
