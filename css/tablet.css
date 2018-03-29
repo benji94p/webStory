@@ -1,0 +1,23 @@
+@media (min-width: 500px) {
+    .landing-container {
+    display: grid;
+    grid-template-columns: 10vw auto 10vw;
+    }
+    #logo {
+        padding: 15px;
+    }
+    #webstories, #headline, #subtext, .cntower, .mousedown {
+        grid-column-start: 2;
+        align-self: center
+    }
+    #headline {
+        font-size: 95px;
+    }
+    #subtext {
+        font-size: 35px;
+    }
+    .cntower {
+        max-height: 220px;
+    }
+
+}

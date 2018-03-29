@@ -43,18 +43,26 @@ h2 {
 /* LANDING */
 
 .landing {
-    background: #FFC6C6;
+background: #ee9ca7;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #ffdde1, #ee9ca7);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #ffdde1, #ee9ca7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
+
 .landing-container {
     display: grid;
 }
+
 #logo {
     margin-top: 15px;
     margin-bottom: 20px;
+    margin: 0 auto;
 }
+
 #webstories {
     max-height: 70px
 }
+
 #headline {
     font-family: storyBook;
     color: #596E78;
@@ -63,26 +71,40 @@ h2 {
     margin-bottom: 50px;
     transform: rotate(-14deg);
 }
+
 #subtext {
-font-family:oswaldExtraLight;
-font-size:25px;
-color:#596e78;
-letter-spacing:0;
+    font-family: oswaldExtraLight;
+    font-size: 25px;
+    color: #596e78;
+    letter-spacing: 0;
 }
+
 .cntower {
     max-height: 180px;
     margin-top: 50px;
 }
+
 .mousedown {
     max-height: 50px;
     position: absolute;
-    bottom: 10px;
+    bottom: 5px;
     left: 50%;
-    /* bring your own prefixes */
-
     transform: translate(-50%, -50%);
 }
+.snowflake-right, .snowflake-left {
+        display: none;
+    }
 
+.animation-snow {
+    animation: animationsnow 3s linear;
+}
+
+@keyframes animationsnow {
+    0%   {opacity: 0; top: 0;}
+    15%  {opacity: 1;}
+    85%  {opacity: 1;}
+    100% {opacity: 0; top: 500px};
+}
 
 /* STORY CONTAINER */
 

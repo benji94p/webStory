@@ -1,0 +1,12 @@
+@media (min-width: 770px) {
+    #headline {
+        font-size: 144px;
+    }
+    #subtext {
+        font-size: 35px;
+    }
+    .cntower {
+        max-height: 220px;
+        margin-top: 0px;
+    }
+}

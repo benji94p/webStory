@@ -1,0 +1,20 @@
+@media (min-width: 1000px) {
+    .snowflake-left {
+        display: block;
+        position: relative;
+        max-width: 30px;
+         grid-column-start: 1;
+        grid-row-start: 3;
+    }
+
+    .snowflake-right {
+        display: block;
+        position: relative;
+        grid-column-start: 3;
+        grid-row-start: 3;
+        max-width: 30px;
+    }
+    #webstories {
+        grid-row-start: 1;
+    }
+}
