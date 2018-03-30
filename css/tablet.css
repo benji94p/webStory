@@ -6,6 +6,9 @@
     #logo {
         padding: 15px;
     }
+    #webstories {
+        grid-row-start: 1;
+    }
     #webstories, #headline, #subtext, .cntower, .mousedown {
         grid-column-start: 2;
         align-self: center

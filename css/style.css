@@ -43,10 +43,9 @@ h2 {
 /* LANDING */
 
 .landing {
-background: #ee9ca7;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #ffdde1, #ee9ca7);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #ffdde1, #ee9ca7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+background: #ee9ca7;
+background: -webkit-linear-gradient(to right, #ffdde1, #ee9ca7);
+background: linear-gradient(to right, #ffdde1, #ee9ca7);
 }
 
 .landing-container {
@@ -91,20 +90,25 @@ background: linear-gradient(to right, #ffdde1, #ee9ca7); /* W3C, IE 10+/ Edge, F
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.snowflake-right, .snowflake-left {
+.snowflake{
         display: none;
     }
 
 .animation-snow {
-    animation: animationsnow 3s linear;
+    animation: animationsnow 4s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.17,.67,.83,.67);
 }
 
 @keyframes animationsnow {
     0%   {opacity: 0; top: 0;}
-    15%  {opacity: 1;}
-    85%  {opacity: 1;}
-    100% {opacity: 0; top: 500px};
+    15%  {opacity: 1; transform: rotate(0deg);}
+    25%  {transform: rotate(20deg);}
+    50%  {transform: rotate(-20deg);}
+    85%  {opacity: 1; transform: rotate(0deg);}
+    100% {opacity: 0; top: 200px};
 }
+
 
 /* STORY CONTAINER */
 
