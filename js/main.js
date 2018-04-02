@@ -48,25 +48,26 @@ document.addEventListener("DOMContentLoaded", function () {
         // Movement mousedown+MovetoStoryContainer
         setTimeout(function addFadeMouse() {
         document.querySelector(".mousedown").classList.add("animation-mouse");
-        $(".mousedown").click(function () {
-            appendStoryElements(0);
-            $('html,body').animate({
-                    scrollTop: (document.body.scrollTop + $(".story").offset().top)
-                },
-                'slow');
-        });
         }, 3000);
         });
 
 
 /* STORY */
 
-
+let currentPartDisplay;
+let nodeListDot = document.querySelectorAll(".circle-timeline");
 $('.story').waypoint(function() {
 
     if (document.querySelector(".left-container").childElementCount === 0) {
         appendStoryElements(0);
-    }
+        currentPartDisplay = 0;
+        nodeListDot[0].children[2].childNodes[1].attributes[2].nodeValue = "#ee9ca7";
+    };
+    document.querySelector("#arrow").addEventListener("click",function () {
+    currentPartDisplay += 1;
+    appendStoryElements(currentPartDisplay);
+
+});
 });
 
 let dataStory = [ {
@@ -101,7 +102,9 @@ let dataStory = [ {
 ];
 
 
+
 function appendStoryElements (storySection) {
+    currentPartDisplay = storySection;
     // If left container contains child, remove it (+rightone);
     document.querySelector(".story").style.backgroundColor = dataStory[storySection].backgroundCol;
     let leftContainer = document.querySelector(".left-container");
@@ -138,23 +141,31 @@ function appendStoryElements (storySection) {
     }
 };
 
-
+/* DOTS ON CLICK */
 
 document.querySelector(".wrapper-dots").addEventListener("click", function(e) {
      let classNumber = e.target.parentElement.parentElement.parentElement.classList[1];
-    console.log(classNumber);
+     let dotColor = e.target.parentElement.getAttribute("fill");
+     for (i=0; i < nodeListDot.length; i++ ) {
+         nodeListDot[i].children[2].childNodes[1].attributes[2].nodeValue = "#596E78";
+     };
+
      switch(classNumber) {
     case "first":
         appendStoryElements(0);
+        e.target.parentElement.setAttribute("fill","#ee9ca7");
         break;
     case "second":
         appendStoryElements(1);
+        e.target.parentElement.setAttribute("fill","#ee9ca7");
         break;
     case "third":
         appendStoryElements(2);
+        e.target.parentElement.setAttribute("fill","#ee9ca7");
         break;
     case "fourth":
         appendStoryElements(3);
+        e.target.parentElement.setAttribute("fill","#ee9ca7");
         break;
     default:
 
