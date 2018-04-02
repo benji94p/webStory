@@ -1,4 +1,5 @@
 @media (min-width: 770px) {
+    /* LANDING */
     #headline {
         font-size: 144px;
     }
@@ -8,5 +9,74 @@
     .cntower {
         max-height: 220px;
         margin-top: 0px;
+    }
+    /* STORY */
+    .story-container {
+        grid-template-columns: 10vw 35vw 35vw 10vw 10vw;
+        grid-template-rows: auto auto auto;
+    }
+    .story-headline {
+        grid-column-start: 1;
+        grid-column-end: 6;
+    }
+    .text-container {
+        grid-column-start: 2;
+        grid-row-start: 2;
+    }
+    .media-container {
+        grid-column-start: 3;
+        grid-row-start: 2;
+        margin: auto;
+    }
+    .media {
+        max-width: 30vw;
+    }
+    .fa-arrow-circle-right {
+        grid-column-start: 4;
+        grid-row-start: 2;
+        margin: auto;
+    }
+    .timeline {
+        display: block;
+        text-align: center;
+        grid-column-start: 2;
+        grid-column-end: 5;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        width: 80vw;
+        margin-top: 170px;
+    }
+    .line {
+        position: relative;
+        width: 80vw;
+        bottom: 10px;
+    }
+    .wrapper-dots {
+        display: flex;
+        justify-content: space-around;
+        width: 80vw;
+    }
+    .wrapper-spans {
+        display: flex;
+        justify-content: space-around;
+        width: 80vw;
+    }
+    .spans {
+        position: relative;
+        width: 80vw;
+        bottom: 30px;
+        font-family: oswaldExtraLight;
+        font-size: 14px;
+        color: #596E78;
+    }
+    .circle-timeline {
+        z-index: 100;
+        position: relative;
+        top: -35px;
+    }
+    .first #Desktop-HD4 {
+        fill: #ee9ca7;
+        fill: -webkit-linear-gradient(to right, #ffdde1, #ee9ca7);
+        fill: linear-gradient(to right, #ffdde1, #ee9ca7);
     }
 }

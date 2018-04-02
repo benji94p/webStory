@@ -25,13 +25,7 @@
     }
 
     /* STORY */
-    .timeline {
-        width: 100vw;
-        height: 100vh;
-    }
-    .line {
-        position: relative;
-        bottom: 10px;
-    }
 
-}
+    .media {
+        max-width: 70vw;}
+    }

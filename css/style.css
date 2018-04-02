@@ -121,4 +121,48 @@ background: linear-gradient(to right, #ffdde1, #ee9ca7);
 }
 /* STORY CONTAINER */
 
+.story-container {
+    display: grid;
+    background-color: F5F5F5;
+}
+.story-headline {
+    text-align: center;
+    font-size: 80px;
+    margin-top: 30px;
+}
+.media {
+    max-width: 90vw;
+    height: auto;
+    display: block;
+    margin: 0 auto
+}
+.rectangle {
+    height: 100px;
+    width: 150px;
+    z-index: -100;
+    position: absolute;
+    top: 160vh;
+    left: 100px;
+    background: #ee9ca7;
+    background: -webkit-linear-gradient(to right, #ffdde1, #ee9ca7);
+    background: linear-gradient(to right, #ffdde1, #ee9ca7);
+
+}
+.text-container {
+    max-width: 90vw;
+    margin: 0 auto;
+    font-family: oswaldLight;
+    grid-row-start: 3;
+    margin-top: 30px;
+}
+.fa-arrow-circle-right {
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 26px
+}
+.timeline {
+    display: none;
+}
+
 /* RESOLUTION */
