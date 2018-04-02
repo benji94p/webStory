@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pelzman // WebStory: Toronto</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/tablet.css">
     <link rel="stylesheet" href="css/tablethd.css">
@@ -103,14 +104,18 @@
     </div>
 
     <div class="page story">
+        <template class="media-template">
+            <img class="media-story media" src="">
+        </template>
+        <template class="text-template">
+            <p class="text-story" ></p>
+        </template>
         <div class="story-container">
             <h2 class="story-headline">First Part</h2>
-            <div class="media-container">
-            <img class="media" src="assets/dullmedia.png">
+            <div class="left-container">
             </div>
             <div class="rectangle"></div>
-            <div class="text-container">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            <div class="right-container">
             </div>
             <i class="fas fa-arrow-circle-right"></i>
             <div class="timeline">
@@ -182,6 +187,11 @@
     </div>
 
     <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+    <script src="library/jquery.waypoints.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

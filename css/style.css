@@ -120,10 +120,11 @@ background: linear-gradient(to right, #ffdde1, #ee9ca7);
     100% {opacity: 1};
 }
 /* STORY CONTAINER */
-
+.story {
+    transition: background-color 1.5s;
+}
 .story-container {
     display: grid;
-    background-color: F5F5F5;
 }
 .story-headline {
     text-align: center;
@@ -148,7 +149,8 @@ background: linear-gradient(to right, #ffdde1, #ee9ca7);
     background: linear-gradient(to right, #ffdde1, #ee9ca7);
 
 }
-.text-container {
+
+.text-story {
     max-width: 90vw;
     margin: 0 auto;
     font-family: oswaldLight;

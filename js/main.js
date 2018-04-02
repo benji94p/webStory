@@ -45,45 +45,119 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
     }
-        // Movement mousedown
-        setTimeout(function addFadeMouse () {  document.querySelector(".mousedown").classList.add("animation-mouse");
+        // Movement mousedown+MovetoStoryContainer
+        setTimeout(function addFadeMouse() {
+        document.querySelector(".mousedown").classList.add("animation-mouse");
+        $(".mousedown").click(function () {
+            appendStoryElements(0);
+            $('html,body').animate({
+                    scrollTop: (document.body.scrollTop + $(".story").offset().top)
+                },
+                'slow');
+        });
         }, 3000);
-});
+        });
+
 
 /* STORY */
 
 
+$('.story').waypoint(function() {
 
-// Append data first part
-// Circle on click:display data relative to the dot
-//When display data, add animation class + change rectlange width & height
-//Arrow:increment by one the current story
+    if (document.querySelector(".left-container").childElementCount === 0) {
+        appendStoryElements(0);
+    }
+});
 
-
-let dataStory = {
-    section1: {
-        headline:"",
-        text: "",
-        media_url:"",
-
-    },
-    section2: {
-        headline:"",
-        text: "",
-        media_url:"",
+let dataStory = [ {
+        headline:"First Part",
+        text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        media_url:"assets/dullassets1.png",
+        backgroundCol:"#F5F5F5",
 
     },
-    section3: {
-        headline:"",
-        text: "",
-        media_url:"",
+    {
+        headline:"Second Part",
+        text: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum.",
+        media_url:"assets/dullassets2.png",
+        backgroundCol:"#EAE8DB",
 
     },
-    section4: {
-        headline:"",
-        text: "",
-        media_url:"",
+    {
+        headline:"Third Part",
+        text: "making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+        media_url:"assets/dullassets3.png",
+        backgroundCol:"#E7EBFF",
+
+    },
+    {
+        headline:"Fourth Part",
+        text: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+        media_url:"assets/dullassets4.png",
+        backgroundCol:"#FFF1E2",
 
     }
 
+];
+
+
+function appendStoryElements (storySection) {
+    // If left container contains child, remove it (+rightone);
+    document.querySelector(".story").style.backgroundColor = dataStory[storySection].backgroundCol;
+    let leftContainer = document.querySelector(".left-container");
+    let rightContainer = document.querySelector(".right-container");
+
+     if(leftContainer.childElementCount !== 0) {
+     while (leftContainer.firstChild) {
+            leftContainer.removeChild(leftContainer.firstChild);
+        };
+     while (rightContainer.firstChild) {
+            rightContainer.removeChild(rightContainer.firstChild);
+        }
+     };
+     document.querySelector(".story-headline").textContent = dataStory[storySection].headline;
+     let mediaTemplate = document.querySelector(".media-template").content;
+     let mediaClone = mediaTemplate.cloneNode(true);
+     let textTemplate = document.querySelector(".text-template").content;
+     let textClone = textTemplate.cloneNode(true);
+     mediaClone.querySelector(".media-story").src = dataStory[storySection].media_url;
+     textClone.querySelector(".text-story").textContent = dataStory[storySection].text;
+
+
+    if (storySection === 0 || storySection === 2 ) {
+        textClone.querySelector(".text-story").classList.add("animated","bounceInLeft");
+        mediaClone.querySelector(".media-story").classList.add("animated","bounceInRight");
+        leftContainer.appendChild(textClone);
+        rightContainer.appendChild(mediaClone);
+    }
+    else {
+        textClone.querySelector(".text-story").classList.add("animated","bounceInRight");
+        mediaClone.querySelector(".media-story").classList.add("animated","bounceInLeft");
+        rightContainer.appendChild(textClone);
+        leftContainer.appendChild(mediaClone);
+    }
 };
+
+
+
+document.querySelector(".wrapper-dots").addEventListener("click", function(e) {
+     let classNumber = e.target.parentElement.parentElement.parentElement.classList[1];
+    console.log(classNumber);
+     switch(classNumber) {
+    case "first":
+        appendStoryElements(0);
+        break;
+    case "second":
+        appendStoryElements(1);
+        break;
+    case "third":
+        appendStoryElements(2);
+        break;
+    case "fourth":
+        appendStoryElements(3);
+        break;
+    default:
+
+}
+
+});
