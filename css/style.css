@@ -106,10 +106,19 @@ background: linear-gradient(to right, #ffdde1, #ee9ca7);
     25%  {transform: rotate(20deg);}
     50%  {transform: rotate(-20deg);}
     85%  {opacity: 1; transform: rotate(0deg);}
-    100% {opacity: 0; top: 200px};
+    100% {opacity: 0; top: 400px};
 }
 
+.animation-mouse {
+    animation: animationmouse 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+}
 
+@keyframes animationmouse {
+    0% {opacity: 0};
+    100% {opacity: 1};
+}
 /* STORY CONTAINER */
 
 /* RESOLUTION */

@@ -44,7 +44,46 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
 
+    }
+        // Movement mousedown
+        setTimeout(function addFadeMouse () {  document.querySelector(".mousedown").classList.add("animation-mouse");
+        }, 3000);
+});
 
+/* STORY */
+
+
+
+// Append data first part
+// Circle on click:display data relative to the dot
+//When display data, add animation class + change rectlange width & height
+//Arrow:increment by one the current story
+
+
+let dataStory = {
+    section1: {
+        headline:"",
+        text: "",
+        media_url:"",
+
+    },
+    section2: {
+        headline:"",
+        text: "",
+        media_url:"",
+
+    },
+    section3: {
+        headline:"",
+        text: "",
+        media_url:"",
+
+    },
+    section4: {
+        headline:"",
+        text: "",
+        media_url:"",
 
     }
-});
+
+};
