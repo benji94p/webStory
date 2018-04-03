@@ -61,6 +61,10 @@ $('.story').waypoint(function() {
     if (document.querySelector(".left-container").childElementCount === 0) {
         appendStoryElements(0);
         currentPartDisplay = 0;
+
+        setTimeout(function() {
+            document.querySelector(".fa-mouse-pointer").style.visibility = "visible";
+        },7000);
         nodeListDot[0].children[2].childNodes[1].attributes[2].nodeValue = "#ee9ca7";
     };
     document.querySelector("#arrow").addEventListener("click",function () {
@@ -170,5 +174,6 @@ document.querySelector(".wrapper-dots").addEventListener("click", function(e) {
     default:
 
 }
+    document.querySelector(".fa-mouse-pointer").style.visibility = "hidden";
 
 });

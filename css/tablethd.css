@@ -35,6 +35,7 @@
         grid-column-start: 4;
         grid-row-start: 2;
         margin: auto;
+        display: none;
     }
     .timeline {
         display: block;
@@ -74,8 +75,19 @@
         position: relative;
         top: -35px;
     }
-
-    .dot-active {
-        fill: #ee9ca7 !important;
+    .fa-mouse-pointer {
+    display: block;
+    visibility: hidden;
+    position: relative;
+    right: -30vw;
     }
+    .userClickedAnimation {
+        animation: userclickanimation 1s infinite;
+    }
+
+    @keyframes userclickanimation {
+    0%   {opacity: 0; bottom: 0vh;}
+    100% {opacity: 1;bottom: 4vh};
+}
+
 }
