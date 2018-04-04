@@ -230,7 +230,19 @@ background: linear-gradient(to right, #ffdde1, #ee9ca7);
     margin-bottom: 50px;
     transform: rotate(-14deg);
 }
+.headlin {
 
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: dash 5s linear forwards;
+
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
 #subtext {
     font-family: oswaldExtraLight;
     font-size: 25px;
