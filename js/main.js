@@ -38,9 +38,12 @@ document.addEventListener("DOMContentLoaded", function () {
         show(landing);
         setTimeout(showStory, 2500);
 
-        function showStory () {
+        function showStory() {
             show(story);
         };
+
+        //SNOW ANIMATION STARTS
+
         let clientViewportWidth = document.querySelector("body").clientWidth;
         if (clientViewportWidth > 1000) {
 
@@ -156,6 +159,7 @@ $('.story').waypoint(function () {
     });
 });
 
+//Main story Data function
 function appendStoryElements(storySection) {
     currentPartDisplay = storySection;
     // If left container contains child, remove it (+rightone);
@@ -195,8 +199,8 @@ function appendStoryElements(storySection) {
         leftContainer.appendChild(mediaClone);
     }
 
-    if (storySection ===3) {
-       document.querySelector(".storymouse").style.display = "block";
+    if (storySection === 3) {
+        document.querySelector(".storymouse").style.display = "block";
         show(resolution);
     }
 
