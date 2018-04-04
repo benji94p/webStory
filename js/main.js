@@ -199,6 +199,10 @@ function appendStoryElements(storySection) {
        document.querySelector(".storymouse").style.display = "block";
         show(resolution);
     }
+
+    if (storySection !== 3) {
+        document.querySelector(".storymouse").style.display = "none";
+    }
 };
 
 /* DOTS ON CLICK */
