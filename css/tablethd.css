@@ -31,6 +31,11 @@
     .media {
         max-width: 30vw;
     }
+    .rectangle {
+        margin-left: 40vw;
+    }
+
+
     .fa-arrow-circle-right {
         grid-column-start: 4;
         grid-row-start: 2;
@@ -90,4 +95,14 @@
     100% {opacity: 1;bottom: 4vh};
 }
 
+
+}
+
+@media (max-width: 770px) {
+    .rectangle {
+        display: none;
+    }
+    .icon-container.fab {
+        font-size: 40px;
+    }
 }

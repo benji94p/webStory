@@ -140,16 +140,12 @@ background: linear-gradient(to right, #ffdde1, #ee9ca7);
     margin: 0 auto
 }
 .rectangle {
-    height: 100px;
-    width: 150px;
-    z-index: -100;
-    position: absolute;
-    top: 160vh;
-    left: 100px;
+
+    transition: width 0.5s;
+    transition: height 1s;
     background: #ee9ca7;
     background: -webkit-linear-gradient(to right, #ffdde1, #ee9ca7);
     background: linear-gradient(to right, #ffdde1, #ee9ca7);
-
 }
 
 .text-story {
@@ -173,3 +169,19 @@ background: linear-gradient(to right, #ffdde1, #ee9ca7);
 }
 
 /* RESOLUTION */
+.resolution {
+background: #ee9ca7;
+background: -webkit-linear-gradient(to right, #ffdde1, #ee9ca7);
+background: linear-gradient(to right, #ffdde1, #ee9ca7);
+}
+
+.resolution-container {
+    text-align: center
+}
+
+#resline {
+    margin-top: 130px;
+    font-family: oswaldExtraLight;
+    font-size: 25px;
+    letter-spacing: 0;
+}

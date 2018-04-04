@@ -79,6 +79,8 @@ let dataStory = [ {
         text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
         media_url:"assets/dullassets1.png",
         backgroundCol:"#F5F5F5",
+        height_rectangle:"200px",
+        width_rectangle:"300px"
 
     },
     {
@@ -86,6 +88,8 @@ let dataStory = [ {
         text: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum.",
         media_url:"assets/dullassets2.png",
         backgroundCol:"#EAE8DB",
+        height_rectangle:"250px",
+        width_rectangle:"220px"
 
     },
     {
@@ -93,6 +97,8 @@ let dataStory = [ {
         text: "making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
         media_url:"assets/dullassets3.png",
         backgroundCol:"#E7EBFF",
+        height_rectangle:"220px",
+        width_rectangle:"340px"
 
     },
     {
@@ -100,6 +106,8 @@ let dataStory = [ {
         text: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
         media_url:"assets/dullassets4.png",
         backgroundCol:"#FFF1E2",
+        height_rectangle:"314px",
+        width_rectangle:"276px"
 
     }
 
@@ -110,6 +118,9 @@ let dataStory = [ {
 function appendStoryElements (storySection) {
     currentPartDisplay = storySection;
     // If left container contains child, remove it (+rightone);
+
+    document.querySelector(".rectangle").style.height = dataStory[storySection].height_rectangle;
+    document.querySelector(".rectangle").style.width = dataStory[storySection].width_rectangle;
     document.querySelector(".story").style.backgroundColor = dataStory[storySection].backgroundCol;
     let leftContainer = document.querySelector(".left-container");
     let rightContainer = document.querySelector(".right-container");
@@ -177,3 +188,17 @@ document.querySelector(".wrapper-dots").addEventListener("click", function(e) {
     document.querySelector(".fa-mouse-pointer").style.visibility = "hidden";
 
 });
+
+/* AUTOSCROLL on ScrollDown */
+
+
+    $(window).bind('mousewheel', function (event) {
+        let beenScrolled = window.scrollY;
+        if (event.originalEvent.wheelDelta !== 0) {
+            if (beenScrolled > 145 && beenScrolled < 160) {
+                $('html,body').animate({
+                    scrollTop: (document.body.scrollTop + $(".story").offset().top)
+                }, 'slow');
+            }
+        }
+    });
