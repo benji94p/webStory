@@ -23,4 +23,16 @@
     .text-container {
         width: 25vw;
     }
+
+    /* RESOLUTION */
+
+    #resline {
+        font-size: 37px
+    }
+    .love {
+    font-size: 68px;
+}
+    .icon-container {
+        margin-top: 50px;
+    }
 }

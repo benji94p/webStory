@@ -1,10 +1,12 @@
-/* LANDING FIX */
+/* HEIGHT FIX */
+
 @media (min-height: 550px) and (max-height: 680px) and (min-width: 760px) {
     #headline {
         font-size: 100px;
         margin-top: 15px;
     }
 }
+
 @media (max-height: 550px) and (min-width: 760px) {
     #headline {
         font-size: 70px;
@@ -14,7 +16,7 @@
         font-size: 18px;
     }
     .cntower {
-     max-height: 173px;
+        max-height: 173px;
     }
     .mousedown {
         max-height: 33px;
@@ -22,8 +24,28 @@
 }
 
 @media (max-height: 680px) and (min-width: 500px) and (max-width: 760px) {
-         #headline {
+    #headline {
         font-size: 70px;
         margin-top: 15px;
+    }
+}
+
+@media (max-height: 680px) {
+    .page {
+        height: 110vh;
+    }
+    .mousedown {
+        bottom: -40px;
+    }
+}
+@media (max-height: 680px) and (max-width: 500px) {
+    .story {
+        height: 118vh
+    }
+}
+
+@media (max-width: 330px) {
+    #subtext {
+        23px
     }
 }

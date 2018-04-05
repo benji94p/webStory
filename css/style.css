@@ -387,7 +387,11 @@ h2 {
     top: 90px;
     max-width: 50px;
 }
-
+#arrow {
+    margin: 0 auto;
+    margin-top: 4vh;
+    height: 38px;
+}
 
 /* RESOLUTION */
 
@@ -404,6 +408,16 @@ h2 {
 #resline {
     margin-top: 130px;
     font-family: oswaldExtraLight;
-    font-size: 25px;
+    font-size: 18px;
     letter-spacing: 0;
+}
+
+.love {
+    font-size: 55px;
+}
+.icon-container {
+    margin-top: 110px;
+}
+.fa-3x {
+    padding: 10px;
 }
