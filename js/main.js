@@ -206,12 +206,15 @@ function appendStoryElements(storySection) {
 
     if (storySection === 3) {
         document.querySelector(".storymouse").style.display = "block";
+         document.querySelector("#arrow").style.display = "none";
         show(resolution);
     }
 
     if (storySection !== 3) {
         document.querySelector(".storymouse").style.display = "none";
     }
+
+
 };
 
 /* DOTS ON CLICK */
@@ -247,7 +250,7 @@ document.querySelector(".wrapper-dots").addEventListener("click", function (e) {
 
 });
 
-/* AUTOSCROLL on ScrollDown
+/* AUTOSCROLL on ScrollDown */
 
 
 $(window).bind('mousewheel', function (event) {
@@ -271,4 +274,4 @@ $(window).bind('mousewheel', function (event) {
 
 });
 
-*/
+

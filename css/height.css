@@ -46,6 +46,6 @@
 
 @media (max-width: 330px) {
     #subtext {
-        23px
+        font-size: 23px
     }
 }

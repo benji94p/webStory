@@ -382,7 +382,6 @@ h2 {
 }
 
 .storymouse {
-    display: none;
     margin: 0;
     top: 90px;
     max-width: 50px;
@@ -420,4 +419,7 @@ h2 {
 }
 .fa-3x {
     padding: 10px;
+}
+.icon-container a {
+    color: black;
 }
