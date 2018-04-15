@@ -9,11 +9,11 @@ let clientViewportWidth = document.querySelector("body").clientWidth;
 
 function initHide(object) {
     object.style.display = "none";
-}
+};
 
 function show(object) {
     object.style.display = "";
-}
+};
 initHide(loading);
 initHide(landing);
 initHide(story);
@@ -101,35 +101,35 @@ document.addEventListener("DOMContentLoaded", function () {
 /* STORY */
 
 let dataStory = [{
-        headline: "First Part",
-        text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-        media_url: "assets/dullassets1.png",
+        headline: "Culture",
+        text: "Before flying to Canada, I’ve heard many people telling me that the culture was warm and welcoming and this was, indeed, one of my first impressions being in contact with Canadians during my first weeks there. The city of Toronto is a modern, fast-paced city with a lot of skyscrapers and a constant flow of people, but also a bit retro in the architecture and the transportation system. I also felt the immoderation in the size of the malls, the roads, the housing items, and many objects that are part of the everyday-life in Toronto, representing well enough the people living there: bold, outgoing, and friendly.",
+        media_url: "assets/story_image1.jpg",
         backgroundCol: "#F5F5F5",
         height_rectangle: "200px",
         width_rectangle: "300px"
 
     },
     {
-        headline: "Second Part",
-        text: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum.",
-        media_url: "assets/dullassets2.png",
+        headline: "Education system",
+        text: "The education system in Canada is a bit different than the one I am used to in Denmark. The schedule and the hours of lecture are different every day, and the projects are mostly individual ones. The classes are usually very small and shaped by an exchange between students and teachers. One thing that struck me is the facilities offered by the college for the student, such as the open access to the top-notch MacBooks all around the college or the size of the campus and the space available to work.",
+        media_url: "assets/story_image2.jpg",
         backgroundCol: "#EAE8DB",
         height_rectangle: "250px",
         width_rectangle: "220px"
 
     },
     {
-        headline: "Third Part",
-        text: "making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
-        media_url: "assets/dullassets3.png",
+        headline: "Lifestyle",
+        text: "The environment around the campus was very pleasant as it’s right by the lake of Ontario, so walks and jogs on the waterfront trail were part of the daily life. Being surrounded by parks and nature was the cost of living an hour from downtown Toronto, which made it a bit inconvenient to experience the heart of Toronto fully. I had the chance to have my housing five minutes from a free ice rink offered by the city, so instead of traveling downtown two hours round-trip to experience city life, I engaged in local life and bought myself a pair of ice skates, rocking the ice until it completely melted.",
+        media_url: "assets/story_image3.jpg",
         backgroundCol: "#E7EBFF",
         height_rectangle: "220px",
         width_rectangle: "340px"
 
     },
     {
-        headline: "Fourth Part",
-        text: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words.",
+        headline: "Impressions",
+        text: "Traveling to a new country in the context of studies is definitely a fulfilling experience and something I would recommend to everyone who has the opportunity to do so. It gave me the chance to look at my studies through a different lens, and challenge myself in new ways—expand my vision and knowledge in my field. Canada offered me as a European the unique insight of North America’s development in technology and the way it transmits that knowledge to its students.",
         media_url: "assets/dullassets1.png",
         backgroundCol: "#FFF1E2",
         height_rectangle: "314px",
@@ -267,9 +267,7 @@ $(window).bind('mousewheel', function (event) {
         if (beenScrolled > 145 && beenScrolled < 160) {
             scrollTo(story);
         }
-        if (beenScrolled > 920 && beenScrolled < 1100) {
-            scrollTo(resolution);
-        }
+
     }
 
 });

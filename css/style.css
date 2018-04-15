@@ -188,12 +188,13 @@ h2 {
 }
 
 .fade-out {
-    animation: fadeout 2s
+    animation: fadeout 2s;
 }
 
 .fade-in {
-    animation: fadeout 1s;
-    animation-direction: reverse;
+    animation: fadein 1s;
+    animation-timing-function: ease-out;
+
 }
 
 @keyframes fadeout {
@@ -205,6 +206,18 @@ h2 {
     }
     100% {
         opacity: 0;
+    }
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.7;
+    }
+    100% {
+        opacity: 1;
     }
 }
 
@@ -364,6 +377,7 @@ h2 {
     font-family: oswaldLight;
     grid-row-start: 3;
     margin-top: 30px;
+    letter-spacing: 0.4px;
 }
 
 .fa-arrow-circle-right {
@@ -402,6 +416,9 @@ h2 {
 
 .resolution-container {
     text-align: center
+}
+.resolution-container > #webstories {
+        margin-top: 10px;
 }
 
 #resline {
